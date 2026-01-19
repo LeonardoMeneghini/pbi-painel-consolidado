@@ -15,24 +15,24 @@ COUNTROWS ( <br>
         'fonte-de-dados'[Coluna do Atributo] = "Atributo que será contabilizado" <br>
     ) <br>
 ) <br>
-**3. DAX para contar a ocorrência de processos com esse atributo (Ex: "Concluído")**
+**3. DAX para contar a ocorrência de processos com esse atributo (Ex: "Concluído")** <br>
    
-Processos Concluídos_DISTINCTCOUNT = 
-CALCULATE (
-    DISTINCTCOUNT ( 'fonte-de-dados'[Coluna do número do Processo] ),
-    'fontes (2)'[Coluna do Atributo] = "Concluído"
-)
+Processos Concluídos_DISTINCTCOUNT = <br>
+CALCULATE ( <br>
+    DISTINCTCOUNT ( 'fonte-de-dados'[Coluna do número do Processo] ),<br>
+    'fontes (2)'[Coluna do Atributo] = "Concluído" <br>
+) <br>
 
-Comentário 1: a coluna "número do Processo" deve ser um atributo de identidade como uma chave PK.
-Comentário 2: geralmente o valor de Operações > Processos que sofreram a operação.
+Comentário 1: a coluna "número do Processo" deve ser um atributo de identidade como uma chave PK. <br>
+Comentário 2: geralmente o valor de Operações > Processos que sofreram a operação. <br>
 
-**4. DAX para calcular a média (Ex: Média mensal dos processos que sofreram a operação identificada na coluna "Atributo")**
+**4. DAX para calcular a média (Ex: Média mensal dos processos que sofreram a operação identificada na coluna "Atributo")** <br>
    
-Concluídos_MEDIA = 
-AVERAGEX (
-    VALUES ( Calendario_2025[Mes] ),
-    CALCULATE (
-        [Processos Concluídos_DISTINCTCOUNT],
-        Calendario_2025[Ano] = 2025
+Concluídos_MEDIA = <br>
+AVERAGEX ( <br>
+    VALUES ( Calendario_2025[Mes] ),<br>
+    CALCULATE (<br>
+        [Processos Concluídos_DISTINCTCOUNT],<br>
+        Calendario_2025[Ano] = 2025 <br>
     )
 )
