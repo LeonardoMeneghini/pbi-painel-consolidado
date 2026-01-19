@@ -23,8 +23,8 @@ CALCULATE ( <br>
     'fontes (2)'[Coluna do Atributo] = "Concluído" <br>
 ) <br>
 
-Comentário 1: a coluna "número do Processo" deve ser um atributo de identidade como uma chave PK. <br>
-Comentário 2: geralmente o valor de Operações > Processos que sofreram a operação. <br>
+_Comentário 1: a coluna "número do Processo" deve ser um atributo de identidade como uma chave PK._ <br>
+_Comentário 2: geralmente o valor de Operações > Processos que sofreram a operação._ <br>
 
 **4. DAX para calcular a média (Ex: Média mensal dos processos que sofreram a operação identificada na coluna "Atributo")** <br>
    
