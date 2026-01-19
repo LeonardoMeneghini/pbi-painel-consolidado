@@ -1,18 +1,20 @@
-# pbi-painel-consolidado
-Relatório de Atividades dos Processos SEI - Análise Consolidada
-**1. Diagrama dos objetos envolvidos nesse painel**
-     
-   [![Descrição](Relacionamentos Dados Consolidados 2.jpg)](https://github.com/LeonardoMeneghini/pbi-painel-consolidado/blob/main/Relacionamentos%20Dados%20Consolidados%202.jpg)
+# pbi-painel-consolidado <br>
 
-**2. DAX para contar a ocorrência de um atributo ou operações relacionados com aquele atributo (Ex: "Concluído")**
+Relatório de Atividades dos Processos SEI - Análise Consolidada <br>
+
+**1. Diagrama dos objetos envolvidos nesse painel** <br>
+     
+   [![Descrição](Relacionamentos Dados Consolidados 2.jpg)](https://github.com/LeonardoMeneghini/pbi-painel-consolidado/blob/main/Relacionamentos%20Dados%20Consolidados%202.jpg) <br>
+
+**2. DAX para contar a ocorrência de um atributo ou operações relacionados com aquele atributo (Ex: "Concluído")** <br>
    
-   Operações de Conclusão_COUNTROWS = 
-COUNTROWS (
-    FILTER (
-        'fonte-de-dados',
-        'fonte-de-dados'[Coluna do Atributo] = "Atributo que será contabilizado"
-    )
-) 
+   Operações de Conclusão_COUNTROWS = <br>
+COUNTROWS ( <br>
+    FILTER ( <br>
+        'fonte-de-dados', <br>
+        'fonte-de-dados'[Coluna do Atributo] = "Atributo que será contabilizado" <br>
+    ) <br>
+) <br>
 **3. DAX para contar a ocorrência de processos com esse atributo (Ex: "Concluído")**
    
 Processos Concluídos_DISTINCTCOUNT = 
